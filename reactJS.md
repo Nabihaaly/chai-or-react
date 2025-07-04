@@ -458,3 +458,7 @@ inside classname
 ### interview questions :
 - a tag pura page refresh hota hai, islye link use krty hain.. reaxct use hi islye krrhy hain kay refresh na ho pur apage 
 
+### export when cbraces and when not 
+| Do you use `export default`?                   | → ❌ No Braces in `import`  |
+| ---------------------------------------------- | -------------------------- |
+| Do you use `export const` / `export function`? | → ✅ Use Braces in `import` |

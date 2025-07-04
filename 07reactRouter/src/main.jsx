@@ -4,7 +4,7 @@ import './index.css'
 // These are tools from React Router to define routes and handle page navigation
 import { createBrowserRouter, RouterProvider ,createRoutesFromElements, Route } from 'react-router-dom'
 import Layout from './Layout'
-import { Home, Contact, About,User, Github } from "./components/Index"
+import { Home, Contact, About,User, Github, githubApiInfo} from "./components/Index"
 
 // Define the routes of your app ( array m daldein routes is main)
 // const router = createBrowserRouter([
@@ -28,7 +28,9 @@ const router = createBrowserRouter(
       <Route path='about' element={<About/>}/> 
       <Route path='contact' element={<Contact/>}/>
       <Route path='user/:userId' element={<User/>}/>
-      <Route path='github' element={<Github/>}></Route>
+      <Route 
+      loader={githubApiInfo}
+      path='github' element={<Github/>}/>
     </Route>
   )
 ) 
